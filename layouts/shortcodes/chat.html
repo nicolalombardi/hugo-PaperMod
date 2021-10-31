@@ -1,0 +1,24 @@
+<script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+<div id="comment-section"></div>
+<style>
+    textarea.cactus-editor-textarea {
+        box-sizing: border-box;
+        padding: 10px;
+        height: 11rem;
+    }
+</style>
+<script>
+initComments({
+  node: document.getElementById("comment-section"),
+  defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+  serverName: "cactus.chat",
+  siteName: "samewire.sh",
+  commentSectionId: "{{ index .Params 0 }}",
+  pageSize: 5,
+  loginEnabled: true,
+  guestPostingEnabled: true,
+  updateInterval: 0
+
+})
+</script>
